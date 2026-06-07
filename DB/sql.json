@@ -1,0 +1,648 @@
+{
+  "course_name": "SQL for Backend & GenAI Engineers",
+  "database": "MySQL",
+  "tools": {
+    "database": "MySQL 8",
+    "client": "DBeaver",
+    "container": "Docker",
+    "backend": "FastAPI",
+    "orm": "SQLAlchemy"
+  },
+  "modules": [
+    {
+      "module_id": 0,
+      "title": "SQL Learning Setup",
+      "objective": "Create a local SQL playground and connect to MySQL.",
+      "topics": [
+        {
+          "name": "Run MySQL",
+          "subtopics": [
+            "Start MySQL container",
+            "Port mapping",
+            "Environment variables",
+            "Database creation"
+          ]
+        },
+        {
+          "name": "Connect Using DBeaver",
+          "subtopics": [
+            "Create connection",
+            "Database explorer",
+            "Query editor",
+            "Result grid",
+            "Schema browser"
+          ]
+        }
+      ],
+      "examples": [
+        "SELECT VERSION();",
+        "SHOW DATABASES;"
+      ],
+      "applications": [
+        "Local development",
+        "Interview practice",
+        "FastAPI projects"
+      ]
+    },
+    {
+      "module_id": 1,
+      "title": "Database Fundamentals",
+      "objective": "Understand relational databases and data modeling basics.",
+      "topics": [
+        {
+          "name": "Core Concepts",
+          "subtopics": [
+            "Database",
+            "Table",
+            "Row",
+            "Column",
+            "Record",
+            "Schema"
+          ]
+        },
+        {
+          "name": "Keys",
+          "subtopics": [
+            "Primary Key",
+            "Foreign Key",
+            "Composite Key",
+            "Candidate Key",
+            "Surrogate Key"
+          ]
+        },
+        {
+          "name": "Relationships",
+          "subtopics": [
+            "One-to-One",
+            "One-to-Many",
+            "Many-to-Many"
+          ]
+        }
+      ],
+      "applications": [
+        "User management",
+        "Clinical trials",
+        "E-commerce",
+        "Chat systems"
+      ],
+      "interview_questions": [
+        "What is a primary key?",
+        "Difference between primary key and foreign key?",
+        "What is a schema?"
+      ]
+    },
+    {
+      "module_id": 2,
+      "title": "SQL Fundamentals",
+      "objective": "Retrieve data from tables.",
+      "topics": [
+        {
+          "name": "SELECT",
+          "subtopics": [
+            "Select all columns",
+            "Select specific columns",
+            "Aliases",
+            "DISTINCT"
+          ]
+        },
+        {
+          "name": "Sorting & Limiting",
+          "subtopics": [
+            "ORDER BY",
+            "ASC",
+            "DESC",
+            "LIMIT"
+          ]
+        }
+      ],
+      "examples": [
+        "SELECT * FROM employees;",
+        "SELECT DISTINCT department FROM employees;"
+      ],
+      "applications": [
+        "Fetch users",
+        "Fetch trials",
+        "Reporting dashboards"
+      ]
+    },
+    {
+      "module_id": 3,
+      "title": "Filtering Data",
+      "objective": "Retrieve only required records.",
+      "topics": [
+        {
+          "name": "Filtering",
+          "subtopics": [
+            "WHERE",
+            "AND",
+            "OR",
+            "NOT",
+            "IN",
+            "BETWEEN",
+            "LIKE",
+            "IS NULL",
+            "IS NOT NULL"
+          ]
+        }
+      ],
+      "examples": [
+        "SELECT * FROM employees WHERE salary > 50000;",
+        "SELECT * FROM trials WHERE phase='Phase III';"
+      ],
+      "applications": [
+        "Search APIs",
+        "Clinical trial filtering",
+        "User lookup"
+      ]
+    },
+    {
+      "module_id": 4,
+      "title": "CRUD Operations",
+      "objective": "Modify table data.",
+      "topics": [
+        {
+          "name": "Create",
+          "subtopics": [
+            "INSERT single row",
+            "INSERT multiple rows"
+          ]
+        },
+        {
+          "name": "Update",
+          "subtopics": [
+            "UPDATE",
+            "Conditional update"
+          ]
+        },
+        {
+          "name": "Delete",
+          "subtopics": [
+            "DELETE",
+            "TRUNCATE",
+            "Soft delete pattern"
+          ]
+        }
+      ],
+      "applications": [
+        "User registration",
+        "Profile updates",
+        "Account deletion"
+      ],
+      "backend_mapping": {
+        "POST": "INSERT",
+        "GET": "SELECT",
+        "PUT": "UPDATE",
+        "DELETE": "DELETE"
+      }
+    },
+    {
+      "module_id": 5,
+      "title": "Data Types",
+      "objective": "Choose proper column types.",
+      "topics": [
+        {
+          "name": "Numeric Types",
+          "subtopics": [
+            "INT",
+            "BIGINT",
+            "FLOAT",
+            "DOUBLE",
+            "DECIMAL"
+          ]
+        },
+        {
+          "name": "Text Types",
+          "subtopics": [
+            "CHAR",
+            "VARCHAR",
+            "TEXT"
+          ]
+        },
+        {
+          "name": "Date Types",
+          "subtopics": [
+            "DATE",
+            "DATETIME",
+            "TIMESTAMP"
+          ]
+        },
+        {
+          "name": "Other Types",
+          "subtopics": [
+            "BOOLEAN",
+            "JSON",
+            "ENUM"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 6,
+      "title": "Constraints",
+      "objective": "Maintain data integrity.",
+      "topics": [
+        {
+          "name": "Constraints",
+          "subtopics": [
+            "PRIMARY KEY",
+            "FOREIGN KEY",
+            "UNIQUE",
+            "CHECK",
+            "NOT NULL",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "applications": [
+        "Unique emails",
+        "Referential integrity",
+        "Validation rules"
+      ]
+    },
+    {
+      "module_id": 7,
+      "title": "SQL Functions",
+      "objective": "Transform and manipulate data.",
+      "topics": [
+        {
+          "name": "String Functions",
+          "subtopics": [
+            "UPPER",
+            "LOWER",
+            "CONCAT",
+            "LENGTH",
+            "SUBSTRING"
+          ]
+        },
+        {
+          "name": "Numeric Functions",
+          "subtopics": [
+            "ROUND",
+            "ABS",
+            "CEIL",
+            "FLOOR"
+          ]
+        },
+        {
+          "name": "Date Functions",
+          "subtopics": [
+            "NOW",
+            "CURRENT_DATE",
+            "DATE_ADD",
+            "DATEDIFF"
+          ]
+        },
+        {
+          "name": "Conditional Functions",
+          "subtopics": [
+            "CASE",
+            "COALESCE"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 8,
+      "title": "Aggregation",
+      "objective": "Summarize data.",
+      "topics": [
+        {
+          "name": "Aggregate Functions",
+          "subtopics": [
+            "COUNT",
+            "SUM",
+            "AVG",
+            "MIN",
+            "MAX"
+          ]
+        },
+        {
+          "name": "Grouping",
+          "subtopics": [
+            "GROUP BY",
+            "HAVING"
+          ]
+        }
+      ],
+      "applications": [
+        "Revenue reports",
+        "Trial counts",
+        "User analytics"
+      ]
+    },
+    {
+      "module_id": 9,
+      "title": "Joins",
+      "priority": "HIGH",
+      "objective": "Combine data from multiple tables.",
+      "topics": [
+        {
+          "name": "Join Types",
+          "subtopics": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL JOIN",
+            "SELF JOIN",
+            "CROSS JOIN"
+          ]
+        }
+      ],
+      "applications": [
+        "Users + Orders",
+        "Trials + Sponsors",
+        "Users + Messages"
+      ],
+      "interview_questions": [
+        "INNER JOIN vs LEFT JOIN",
+        "When would LEFT JOIN return NULL?"
+      ]
+    },
+    {
+      "module_id": 10,
+      "title": "Database Design",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "Relationships",
+          "subtopics": [
+            "One-to-One",
+            "One-to-Many",
+            "Many-to-Many",
+            "Junction Tables"
+          ]
+        },
+        {
+          "name": "Modeling",
+          "subtopics": [
+            "ER Diagrams",
+            "Schema Design",
+            "Domain Modeling"
+          ]
+        }
+      ],
+      "projects": [
+        "Chat System",
+        "Clinical Trial Platform",
+        "E-Commerce"
+      ]
+    },
+    {
+      "module_id": 11,
+      "title": "Subqueries",
+      "topics": [
+        {
+          "name": "Subquery Types",
+          "subtopics": [
+            "Scalar",
+            "IN",
+            "EXISTS",
+            "Correlated Subqueries"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 12,
+      "title": "Common Table Expressions (CTEs)",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "CTEs",
+          "subtopics": [
+            "WITH",
+            "Multiple CTEs",
+            "Recursive CTEs"
+          ]
+        }
+      ],
+      "applications": [
+        "Complex reports",
+        "Hierarchical queries",
+        "Analytics"
+      ]
+    },
+    {
+      "module_id": 13,
+      "title": "Window Functions",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "Ranking",
+          "subtopics": [
+            "ROW_NUMBER",
+            "RANK",
+            "DENSE_RANK"
+          ]
+        },
+        {
+          "name": "Partitions",
+          "subtopics": [
+            "OVER",
+            "PARTITION BY"
+          ]
+        },
+        {
+          "name": "Advanced Analytics",
+          "subtopics": [
+            "Running Totals",
+            "Moving Averages"
+          ]
+        }
+      ],
+      "applications": [
+        "Leaderboards",
+        "Top N queries",
+        "Analytics dashboards"
+      ]
+    },
+    {
+      "module_id": 14,
+      "title": "Transactions",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "Transaction Control",
+          "subtopics": [
+            "BEGIN",
+            "COMMIT",
+            "ROLLBACK",
+            "SAVEPOINT"
+          ]
+        },
+        {
+          "name": "ACID",
+          "subtopics": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability"
+          ]
+        }
+      ],
+      "applications": [
+        "Bank transfers",
+        "Payments",
+        "Order processing"
+      ]
+    },
+    {
+      "module_id": 15,
+      "title": "Indexing",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "Index Types",
+          "subtopics": [
+            "B-Tree",
+            "Composite Index",
+            "Unique Index",
+            "Covering Index"
+          ]
+        }
+      ],
+      "applications": [
+        "Fast lookups",
+        "Search optimization",
+        "Performance tuning"
+      ]
+    },
+    {
+      "module_id": 16,
+      "title": "Query Optimization",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "Execution Plans",
+          "subtopics": [
+            "EXPLAIN",
+            "Query Cost",
+            "Sequential Scan",
+            "Index Scan"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 17,
+      "title": "Normalization",
+      "topics": [
+        {
+          "name": "Normal Forms",
+          "subtopics": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+          ]
+        },
+        {
+          "name": "Advanced",
+          "subtopics": [
+            "Denormalization"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 18,
+      "title": "Advanced MySQL",
+      "topics": [
+        {
+          "name": "Advanced Features",
+          "subtopics": [
+            "Views",
+            "Stored Procedures",
+            "Triggers",
+            "Events",
+            "Partitioning",
+            "JSON"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 19,
+      "title": "SQLAlchemy",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "ORM Basics",
+          "subtopics": [
+            "Engine",
+            "Session",
+            "Models",
+            "Relationships"
+          ]
+        },
+        {
+          "name": "Advanced",
+          "subtopics": [
+            "Async SQLAlchemy",
+            "Connection Pooling"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 20,
+      "title": "FastAPI + MySQL",
+      "priority": "HIGH",
+      "topics": [
+        {
+          "name": "Integration",
+          "subtopics": [
+            "Database Connection",
+            "Dependency Injection",
+            "CRUD APIs",
+            "Transactions",
+            "Pagination"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 21,
+      "title": "Database Design for GenAI",
+      "topics": [
+        {
+          "name": "Schemas",
+          "subtopics": [
+            "Chat History",
+            "Clinical Trials",
+            "Taxonomy Mapping",
+            "Agent Logs",
+            "Tool Calls",
+            "Prompt Storage",
+            "Evaluation Results"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 22,
+      "title": "Interview Preparation",
+      "topics": [
+        {
+          "name": "SQL Problems",
+          "subtopics": [
+            "Second Highest Salary",
+            "Nth Highest Salary",
+            "Duplicate Records",
+            "Running Totals",
+            "Ranking Problems"
+          ]
+        },
+        {
+          "name": "System Design",
+          "subtopics": [
+            "WhatsApp Database",
+            "Amazon Database",
+            "Clinical Trial Platform",
+            "ChatGPT Database Design"
+          ]
+        }
+      ]
+    }
+  ]
+}

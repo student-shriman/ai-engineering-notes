@@ -1,0 +1,48 @@
+# ── Jupyter ────────────────────────────────────────────────────────────────────
+jupyter
+notebook
+ipykernel
+nest-asyncio          # run asyncio.run() inside Jupyter
+
+# ── Core Data Science ──────────────────────────────────────────────────────────
+numpy
+pandas
+tabulate              # pretty-print DataFrames in notebooks
+
+# ── Visualization ──────────────────────────────────────────────────────────────
+matplotlib
+seaborn
+plotly
+
+# ── Machine Learning ───────────────────────────────────────────────────────────
+scikit-learn
+
+# ── Database ───────────────────────────────────────────────────────────────────
+sqlalchemy            # ORM (Modules 19–20 in SQL notebook, Module 13 FastAPI)
+aiosqlite             # async SQLite support for SQLAlchemy
+mysql-connector-python # swap in for MySQL production use
+pymysql               # alternative MySQL connector (used by SQLAlchemy)
+
+# ── FastAPI & Web ──────────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]     # ASGI server
+python-multipart      # form data + file uploads
+httpx                 # async HTTP client + FastAPI TestClient dependency
+
+# ── Auth ───────────────────────────────────────────────────────────────────────
+python-jose[cryptography]  # JWT creation and verification
+passlib[bcrypt]            # password hashing
+
+# ── Caching ────────────────────────────────────────────────────────────────────
+redis                 # Redis client (Module 18 — caching)
+
+# ── Testing ────────────────────────────────────────────────────────────────────
+pytest
+pytest-asyncio
+
+# ── Observability ──────────────────────────────────────────────────────────────
+opentelemetry-sdk
+opentelemetry-instrumentation-fastapi
+
+# ── Large Datasets ─────────────────────────────────────────────────────────────
+vaex                  # out-of-core DataFrame (Notebook 19 - Vaex)
